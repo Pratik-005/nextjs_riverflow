@@ -13,7 +13,7 @@ export default async function createQuestionCollection(){
     Permission.update("users"),
     Permission.delete("users"),
   ])
-  console.log("Question collection is created")
+  console.log("Question collection is created")                                                    
 
   //creating attributes and Indexes
   await Promise.all([

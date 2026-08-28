@@ -55,7 +55,6 @@ export const useAuthStore = create<IAuthStore>()(
                 try {
                     const session = await account.getSession("current")
                     set({ session })
-
                 } catch (error) {
                     console.log(error)
                 }
@@ -97,7 +96,6 @@ export const useAuthStore = create<IAuthStore>()(
                     return {
                         success: false,
                         error: error instanceof AppwriteException ? error : null,
-
                     }
                 }
             },

@@ -12,6 +12,7 @@ export default async function createVoteCollection() {
         Permission.update("users"),
         Permission.delete("users"),
     ]);
+    
     console.log("Vote Collection Created");
 
     // Creating Attributes

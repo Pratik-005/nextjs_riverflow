@@ -6,6 +6,7 @@ import { UserPrefs } from "@/store/Auth"
 
 export async function POST(request: NextRequest) {
     try {
+
         const { questionId, answer, authorId } = await request.json();
 
         const response = await databases.createDocument(db, answerCollection, ID.unique(), {
@@ -54,8 +55,6 @@ export async function DELETE(request: NextRequest) {
             { data: response },
             { status: 200 }
         )
-
-
 
     } catch (error: any) {
         return NextResponse.json(
